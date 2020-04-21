@@ -10,15 +10,13 @@
 		}
 		#content{
 			display: grid;
-			/*grid-template-columns: 30% 20% 50%;*/
-			/*grid-template-columns: 1fr 2fr 1fr;*/
 			grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, minmax(200px, auto));
-            /* grid-template-rows: 200px 300px 400px; */
-            /* grid-auto-rows: minmax(200px, auto); */
+            grid-auto-rows: minmax(150px, auto);
             grid-gap: 10px;
 			max-width: 960px;
 			margin: 0 auto;
+            /* align-items: start;
+            justify-items: start; */
 		}
 		#content div{
 			background: #3bbced;
@@ -28,35 +26,30 @@
 			background: #777;
 			padding: 30px;
 		}
-        .nested {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 10px;
-            grid-column: span 3;
+        .one {
+            justify-self: start;
+            align-self: end;
         }
-        .nested p {
-            border: 1px solid #fff;
-            padding: 20px;
-            margin: 0;
+        .two {
+            align-self: center;
+            justify-self: center;
         }
-        
+        .three {
+            justify-self: end;
+            align-self: start;
+        }   
 	</style>
 </head>
 <body>
     <h1>CSS Grid Experiments</h1>
 	<div id="content">
 
-		<div>1</div>
-		<div>2</div>
-		<div>3</div>
-		<div class="nested">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-        </div>
-		<div>5</div>
-		<div>6</div>
+		<div class="one">1</div>
+		<div class="two">2</div>
+		<div class="three">3</div>
+		<div class="four">4</div>
+		<div class="five">5</div>
+		<div class="six">6</div>
 
 	</div>
 
